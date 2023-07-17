@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface AccountMapper {
     public List<Account> findAll();
+
+    public int save(Account account);
 }

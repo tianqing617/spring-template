@@ -26,6 +26,16 @@ public class AccountServiceImpl implements AccountService {
         return mapper.findAll();
     }
 
+    @Override
+    public int save(Account account) throws IOException {
+        SqlSession sqlSession = getSqlSession();
+
+        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
+        int count = mapper.save(account);
+        sqlSession.commit();
+        return count;
+    }
+
     private SqlSession getSqlSession() throws IOException {
         // 加载核心配置文件
         InputStream resourceAsStream = Resources.getResourceAsStream("mybatis-config.xml");

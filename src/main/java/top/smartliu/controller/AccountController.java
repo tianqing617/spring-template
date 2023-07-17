@@ -20,4 +20,17 @@ public class AccountController {
         System.out.println(accountList);
         return "findAll";
     }
+
+    @RequestMapping("/save")
+    @ResponseBody
+    public String save() throws IOException {
+        Account account = new Account();
+        account.setName("wangwu");
+        account.setMoney(200.00);
+
+        int count = accountService.save(account);
+        System.out.print("影响行数：");
+        System.out.println(count);
+        return "save";
+    }
 }

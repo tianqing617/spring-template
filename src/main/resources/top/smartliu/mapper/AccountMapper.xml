@@ -6,4 +6,8 @@
     <select id="findAll" resultType="top.smartliu.domain.Account">
         select * from account
     </select>
+
+    <insert id="save" parameterType="top.smartliu.domain.Account">
+        insert into account values(#{id},#{name},#{money})
+    </insert>
 </mapper>
