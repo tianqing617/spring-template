@@ -13,8 +13,6 @@
     -->
     <bean id="accountService" class="top.smartliu.service.impl.AccountServiceImpl">
     </bean>
-    <!--<bean id="studentDao" class="top.smartliu.dao.impl.StudentDaoImpl">-->
-    <!--</bean>-->
 
     <!--注解的组件扫描-->
     <!--<context:component-scan base-package="top.smartliu"/>-->
