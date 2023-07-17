@@ -31,7 +31,6 @@
 
     <!--指定映射关系-->
     <mappers>
-        <!--指定接口所在的包，注释方式使用-->
-        <package name="top.smartliu.mapper"/>
+        <mapper resource="top/smartliu/mapper/AccountMapper.xml"/>
     </mappers>
 </configuration>
