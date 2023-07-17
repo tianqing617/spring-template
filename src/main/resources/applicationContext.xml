@@ -11,8 +11,8 @@
         id属性标示给bean起名字
         class属性表示给bean定义类型
     -->
-    <!--<bean id="studentService" class="top.smartliu.service.impl.StudentServiceImpl">-->
-    <!--</bean>-->
+    <bean id="accountService" class="top.smartliu.service.impl.AccountServiceImpl">
+    </bean>
     <!--<bean id="studentDao" class="top.smartliu.dao.impl.StudentDaoImpl">-->
     <!--</bean>-->
 
