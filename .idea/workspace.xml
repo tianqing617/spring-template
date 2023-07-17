@@ -9,12 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e1737b-93fd-4c2a-a3c6-8ac4107c98b7" name="Changes" comment="chore: init service">
+    <list default="true" id="34e1737b-93fd-4c2a-a3c6-8ac4107c98b7" name="Changes" comment="chore: init mapper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/smartliu/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/smartliu/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/smartliu/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/smartliu/service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/smartliu/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/smartliu/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/top.smartliu.mapper/AccountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/top.smartliu.mapper/AccountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +73,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -181,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689556850091</updated>
-      <workItem from="1689556851306" duration="6060000" />
+      <workItem from="1689556851306" duration="6800000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init project">
       <created>1689556932665</created>
@@ -225,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689563697797</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="chore: init mapper">
+      <created>1689565073956</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689565073956</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: init mapper">
+      <created>1689565077811</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689565077811</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +258,7 @@
     <MESSAGE value="chore: add pom" />
     <MESSAGE value="chore: init controller" />
     <MESSAGE value="chore: init service" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: init service" />
+    <MESSAGE value="chore: init mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: init mapper" />
   </component>
 </project>
