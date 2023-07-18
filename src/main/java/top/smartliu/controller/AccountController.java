@@ -18,19 +18,19 @@ public class AccountController {
     public String findAll() throws IOException {
         List<Account> accountList = accountService.findAll();
         System.out.println(accountList);
-        return "findAll";
+        return accountList.toString();
     }
 
     @RequestMapping("/save")
     @ResponseBody
-    public String save() throws IOException {
+    public int save() throws IOException {
         Account account = new Account();
-        account.setName("wangwu");
-        account.setMoney(200.00);
+        account.setName("xiaochen");
+        account.setMoney(300.00);
 
         int count = accountService.save(account);
         System.out.print("影响行数：");
         System.out.println(count);
-        return "save";
+        return count;
     }
 }

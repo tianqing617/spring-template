@@ -11,9 +11,15 @@
         id属性标示给bean起名字
         class属性表示给bean定义类型
     -->
-    <bean id="accountService" class="top.smartliu.service.impl.AccountServiceImpl">
-    </bean>
+    <!--<bean id="accountService" class="top.smartliu.service.impl.AccountServiceImpl">-->
+    <!--</bean>-->
 
     <!--注解的组件扫描-->
     <!--<context:component-scan base-package="top.smartliu"/>-->
+    
+    <!--组件扫描 service 和 mapper-->
+    <context:component-scan base-package="top.smartliu">
+        <!--排除controller层，因controller交由spring-mvc-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
+    </context:component-scan>
 </beans>
