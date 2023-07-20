@@ -6,20 +6,32 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 ">
-    <!--2.配置bean-->
-    <!--
-        id属性标示给bean起名字
-        class属性表示给bean定义类型
-    -->
-    <!--<bean id="accountService" class="top.smartliu.service.impl.AccountServiceImpl">-->
-    <!--</bean>-->
-
-    <!--注解的组件扫描-->
-    <!--<context:component-scan base-package="top.smartliu"/>-->
-    
     <!--组件扫描 service 和 mapper-->
     <context:component-scan base-package="top.smartliu">
         <!--排除controller层，因controller交由spring-mvc-->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
     </context:component-scan>
+
+    <!--加载property文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+
+    <!--配置数据源信息-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+    <!--配置sessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <!--加载mybatis核心文件-->
+        <property name="configLocation" value="classpath:sqlMapConfig-spring.xml"></property>
+    </bean>
+
+    <!--扫描mapper所在的包 为mapper创建实现类-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="top.smartliu.mapper"></property>
+    </bean>
 </beans>

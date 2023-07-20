@@ -4,6 +4,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.smartliu.domain.Account;
 import top.smartliu.mapper.AccountMapper;
@@ -15,17 +16,18 @@ import java.util.List;
 
 @Service("accountService")
 public class AccountServiceImpl implements AccountService {
+    @Autowired
+    private AccountMapper accountMapper;
+
+    // spring集成mybatis的方式
     @Override
     public List<Account> findAll() throws IOException{
         System.out.println("service findAll");
-        // return accountMapper.findAll();
 
-        SqlSession sqlSession = getSqlSession();
-
-        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
-        return mapper.findAll();
+        return accountMapper.findAll();
     }
 
+    // spring未集成mybatis的方式
     @Override
     public int save(Account account) throws IOException {
         SqlSession sqlSession = getSqlSession();
